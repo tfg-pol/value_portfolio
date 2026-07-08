@@ -1,0 +1,5 @@
+312 monthly cross-section dates (2000-01-31 -> 2025-12-31).
+1074 tickers ever in the index across the window.
+312 usable cross-sections; names/date min=487 median=499 max=500.
+[ridge] 107918 scores over 2008-01-31 -> 2025-12-31 written to /home/pol/Escritorio/tfg/data/scores/valuation_ridge.parquet.
+[gbt] 107918 scores over 2008-01-31 -> 2025-12-31 written to /home/pol/Escritorio/tfg/data/scores/valuation_gbt.parquet.

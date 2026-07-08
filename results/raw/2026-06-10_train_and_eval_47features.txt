@@ -1,0 +1,238 @@
+312 monthly cross-section dates (2000-01-31 -> 2025-12-31).
+1074 tickers ever in the index across the window.
+47 features per name (levels, health ratios, YoY trajectory).
+312 usable cross-sections; names/date min=487 median=499 max=500.
+[ridge] 107918 scores over 2008-01-31 -> 2025-12-31 written to /home/pol/Escritorio/tfg/data/scores/valuation_ridge.parquet.
+[gbt] 107918 scores over 2008-01-31 -> 2025-12-31 written to /home/pol/Escritorio/tfg/data/scores/valuation_gbt.parquet.
+=====EVAL RIDGE=====
+13 rolling windows of 5y stepping 12m over 2008-01-01 -> 2025-12-31.
+
+--- window 2008-01-01 -> 2013-01-01 ---
+Scored basket from valuation_ridge.parquet: 854 names.
+Loaded 771 symbols with bars, 1259 trading days (2008-01-02 -> 2012-12-31).
+Fundamentals seam — A revenue as of 2013-01-01: 6858000000.0
+--- window 2009-01-01 -> 2014-01-01 ---
+Scored basket from valuation_ridge.parquet: 854 names.
+Loaded 767 symbols with bars, 1258 trading days (2009-01-02 -> 2013-12-31).
+Fundamentals seam — A revenue as of 2014-01-01: 6782000000.0
+--- window 2010-01-01 -> 2015-01-01 ---
+Scored basket from valuation_ridge.parquet: 854 names.
+Loaded 768 symbols with bars, 1258 trading days (2010-01-04 -> 2014-12-31).
+Fundamentals seam — A revenue as of 2015-01-01: 6981000000.0
+--- window 2011-01-01 -> 2016-01-01 ---
+Scored basket from valuation_ridge.parquet: 854 names.
+Loaded 769 symbols with bars, 1258 trading days (2011-01-03 -> 2015-12-31).
+Fundamentals seam — A revenue as of 2016-01-01: 4038000000.0
+--- window 2012-01-01 -> 2017-01-01 ---
+Scored basket from valuation_ridge.parquet: 854 names.
+Loaded 762 symbols with bars, 1258 trading days (2012-01-03 -> 2016-12-30).
+Fundamentals seam — A revenue as of 2017-01-01: 4202000000.0
+--- window 2013-01-01 -> 2018-01-01 ---
+Scored basket from valuation_ridge.parquet: 854 names.
+Loaded 758 symbols with bars, 1259 trading days (2013-01-02 -> 2017-12-29).
+Fundamentals seam — A revenue as of 2018-01-01: 4472000000.0
+--- window 2014-01-01 -> 2019-01-01 ---
+Scored basket from valuation_ridge.parquet: 854 names.
+Loaded 753 symbols with bars, 1258 trading days (2014-01-02 -> 2018-12-31).
+Fundamentals seam — A revenue as of 2019-01-01: 4914000000.0
+--- window 2015-01-01 -> 2020-01-01 ---
+Scored basket from valuation_ridge.parquet: 854 names.
+Loaded 753 symbols with bars, 1258 trading days (2015-01-02 -> 2019-12-31).
+Fundamentals seam — A revenue as of 2020-01-01: 5163000000.0
+--- window 2016-01-01 -> 2021-01-01 ---
+Scored basket from valuation_ridge.parquet: 854 names.
+Loaded 741 symbols with bars, 1259 trading days (2016-01-04 -> 2020-12-31).
+Fundamentals seam — A revenue as of 2021-01-01: 5339000000.0
+--- window 2017-01-01 -> 2022-01-01 ---
+Scored basket from valuation_ridge.parquet: 854 names.
+Loaded 721 symbols with bars, 1259 trading days (2017-01-03 -> 2021-12-31).
+Fundamentals seam — A revenue as of 2022-01-01: 6319000000.0
+--- window 2018-01-01 -> 2023-01-01 ---
+Scored basket from valuation_ridge.parquet: 854 names.
+Loaded 700 symbols with bars, 1259 trading days (2018-01-02 -> 2022-12-30).
+Fundamentals seam — A revenue as of 2023-01-01: 6848000000.0
+--- window 2019-01-01 -> 2024-01-01 ---
+Scored basket from valuation_ridge.parquet: 854 names.
+Loaded 687 symbols with bars, 1258 trading days (2019-01-02 -> 2023-12-29).
+Fundamentals seam — A revenue as of 2024-01-01: 6833000000.0
+--- window 2020-01-01 -> 2025-01-01 ---
+Scored basket from valuation_ridge.parquet: 854 names.
+Loaded 678 symbols with bars, 1258 trading days (2020-01-02 -> 2024-12-31).
+Fundamentals seam — A revenue as of 2025-01-01: 6510000000.0
+
+=== Multi-window distribution — top20 (ridge scores) ===
+Windows evaluated  : 13
+Metric                  mean       std       min    median       max
+total_return         106.232   124.299     6.519    88.968   498.275 %
+cagr                  13.645    10.290     1.273    13.607    43.078 %
+volatility            29.738     9.442    18.649    32.613    49.374 %
+sharpe_ratio           0.577     0.268     0.163     0.528     1.111
+max_drawdown         -46.907    11.530   -66.808   -46.630   -31.935 %
+turnover              39.883    15.322    29.867    37.860    88.486
+benchmark_return      87.005    32.787    10.162    95.359   131.437 %
+active_return         19.227   116.093   -72.782   -13.977   377.114 %
+tracking_error        19.093     6.670    11.331    22.244    30.561 %
+information_ratio      0.112     0.422    -0.479     0.032     1.028
+beta                   1.303     0.159     1.163     1.251     1.701
+jensens_alpha         -0.793     7.944    -8.601    -1.664    17.477 %
+
+active_return per window:
+  2008-01-01 -> 2013-01-01: 0.9048
+  2009-01-01 -> 2014-01-01: 3.7711
+  2010-01-01 -> 2015-01-01: 0.3803
+  2011-01-01 -> 2016-01-01: -0.3361
+  2012-01-01 -> 2017-01-01: 0.3078
+  2013-01-01 -> 2018-01-01: -0.1398
+  2014-01-01 -> 2019-01-01: -0.4513
+  2015-01-01 -> 2020-01-01: -0.4491
+  2016-01-01 -> 2021-01-01: -0.5070
+  2017-01-01 -> 2022-01-01: -0.7278
+  2018-01-01 -> 2023-01-01: -0.2182
+  2019-01-01 -> 2024-01-01: -0.0442
+  2020-01-01 -> 2025-01-01: 0.0089
+
+information_ratio per window:
+  2008-01-01 -> 2013-01-01: 0.6755
+  2009-01-01 -> 2014-01-01: 1.0276
+  2010-01-01 -> 2015-01-01: 0.4294
+  2011-01-01 -> 2016-01-01: -0.2048
+  2012-01-01 -> 2017-01-01: 0.3280
+  2013-01-01 -> 2018-01-01: -0.0322
+  2014-01-01 -> 2019-01-01: -0.4785
+  2015-01-01 -> 2020-01-01: -0.3589
+  2016-01-01 -> 2021-01-01: -0.0942
+  2017-01-01 -> 2022-01-01: -0.1809
+  2018-01-01 -> 2023-01-01: 0.0319
+  2019-01-01 -> 2024-01-01: 0.1507
+  2020-01-01 -> 2025-01-01: 0.1664
+
+sharpe_ratio per window:
+  2008-01-01 -> 2013-01-01: 0.5275
+  2009-01-01 -> 2014-01-01: 1.1109
+  2010-01-01 -> 2015-01-01: 0.8734
+  2011-01-01 -> 2016-01-01: 0.4357
+  2012-01-01 -> 2017-01-01: 0.9063
+  2013-01-01 -> 2018-01-01: 0.7770
+  2014-01-01 -> 2019-01-01: 0.1629
+  2015-01-01 -> 2020-01-01: 0.3504
+  2016-01-01 -> 2021-01-01: 0.4333
+  2017-01-01 -> 2022-01-01: 0.4468
+  2018-01-01 -> 2023-01-01: 0.3413
+  2019-01-01 -> 2024-01-01: 0.5733
+  2020-01-01 -> 2025-01-01: 0.5576
+=====EVAL GBT=====
+13 rolling windows of 5y stepping 12m over 2008-01-01 -> 2025-12-31.
+
+--- window 2008-01-01 -> 2013-01-01 ---
+Scored basket from valuation_gbt.parquet: 854 names.
+Loaded 771 symbols with bars, 1259 trading days (2008-01-02 -> 2012-12-31).
+Fundamentals seam — A revenue as of 2013-01-01: 6858000000.0
+--- window 2009-01-01 -> 2014-01-01 ---
+Scored basket from valuation_gbt.parquet: 854 names.
+Loaded 767 symbols with bars, 1258 trading days (2009-01-02 -> 2013-12-31).
+Fundamentals seam — A revenue as of 2014-01-01: 6782000000.0
+--- window 2010-01-01 -> 2015-01-01 ---
+Scored basket from valuation_gbt.parquet: 854 names.
+Loaded 768 symbols with bars, 1258 trading days (2010-01-04 -> 2014-12-31).
+Fundamentals seam — A revenue as of 2015-01-01: 6981000000.0
+--- window 2011-01-01 -> 2016-01-01 ---
+Scored basket from valuation_gbt.parquet: 854 names.
+Loaded 769 symbols with bars, 1258 trading days (2011-01-03 -> 2015-12-31).
+Fundamentals seam — A revenue as of 2016-01-01: 4038000000.0
+--- window 2012-01-01 -> 2017-01-01 ---
+Scored basket from valuation_gbt.parquet: 854 names.
+Loaded 762 symbols with bars, 1258 trading days (2012-01-03 -> 2016-12-30).
+Fundamentals seam — A revenue as of 2017-01-01: 4202000000.0
+--- window 2013-01-01 -> 2018-01-01 ---
+Scored basket from valuation_gbt.parquet: 854 names.
+Loaded 758 symbols with bars, 1259 trading days (2013-01-02 -> 2017-12-29).
+Fundamentals seam — A revenue as of 2018-01-01: 4472000000.0
+--- window 2014-01-01 -> 2019-01-01 ---
+Scored basket from valuation_gbt.parquet: 854 names.
+Loaded 753 symbols with bars, 1258 trading days (2014-01-02 -> 2018-12-31).
+Fundamentals seam — A revenue as of 2019-01-01: 4914000000.0
+--- window 2015-01-01 -> 2020-01-01 ---
+Scored basket from valuation_gbt.parquet: 854 names.
+Loaded 753 symbols with bars, 1258 trading days (2015-01-02 -> 2019-12-31).
+Fundamentals seam — A revenue as of 2020-01-01: 5163000000.0
+--- window 2016-01-01 -> 2021-01-01 ---
+Scored basket from valuation_gbt.parquet: 854 names.
+Loaded 741 symbols with bars, 1259 trading days (2016-01-04 -> 2020-12-31).
+Fundamentals seam — A revenue as of 2021-01-01: 5339000000.0
+--- window 2017-01-01 -> 2022-01-01 ---
+Scored basket from valuation_gbt.parquet: 854 names.
+Loaded 721 symbols with bars, 1259 trading days (2017-01-03 -> 2021-12-31).
+Fundamentals seam — A revenue as of 2022-01-01: 6319000000.0
+--- window 2018-01-01 -> 2023-01-01 ---
+Scored basket from valuation_gbt.parquet: 854 names.
+Loaded 700 symbols with bars, 1259 trading days (2018-01-02 -> 2022-12-30).
+Fundamentals seam — A revenue as of 2023-01-01: 6848000000.0
+--- window 2019-01-01 -> 2024-01-01 ---
+Scored basket from valuation_gbt.parquet: 854 names.
+Loaded 687 symbols with bars, 1258 trading days (2019-01-02 -> 2023-12-29).
+Fundamentals seam — A revenue as of 2024-01-01: 6833000000.0
+--- window 2020-01-01 -> 2025-01-01 ---
+Scored basket from valuation_gbt.parquet: 854 names.
+Loaded 678 symbols with bars, 1258 trading days (2020-01-02 -> 2024-12-31).
+Fundamentals seam — A revenue as of 2025-01-01: 6510000000.0
+
+=== Multi-window distribution — top20 (gbt scores) ===
+Windows evaluated  : 13
+Metric                  mean       std       min    median       max
+total_return         107.750    99.273    17.740    92.956   417.506 %
+cagr                  14.430     8.665     3.324    14.076    38.982 %
+volatility            30.213     7.935    21.195    32.537    46.726 %
+sharpe_ratio           0.592     0.213     0.259     0.618     1.090
+max_drawdown         -48.511     9.540   -69.266   -47.797   -32.230 %
+turnover              67.545    21.771    50.589    59.900   135.965
+benchmark_return      87.005    32.787    10.162    95.359   131.437 %
+active_return         20.745    88.731   -52.204    -2.203   296.344 %
+tracking_error        19.589     4.708    12.225    21.599    26.803 %
+information_ratio      0.172     0.352    -0.358     0.096     1.004
+beta                   1.315     0.130     1.166     1.291     1.622
+jensens_alpha         -0.158     6.438    -9.071    -2.680    14.812 %
+
+active_return per window:
+  2008-01-01 -> 2013-01-01: 0.7509
+  2009-01-01 -> 2014-01-01: 2.9634
+  2010-01-01 -> 2015-01-01: 0.1178
+  2011-01-01 -> 2016-01-01: -0.5220
+  2012-01-01 -> 2017-01-01: -0.0220
+  2013-01-01 -> 2018-01-01: -0.0964
+  2014-01-01 -> 2019-01-01: -0.3391
+  2015-01-01 -> 2020-01-01: -0.1892
+  2016-01-01 -> 2021-01-01: 0.2664
+  2017-01-01 -> 2022-01-01: -0.2166
+  2018-01-01 -> 2023-01-01: 0.1185
+  2019-01-01 -> 2024-01-01: 0.1244
+  2020-01-01 -> 2025-01-01: -0.2592
+
+information_ratio per window:
+  2008-01-01 -> 2013-01-01: 0.6651
+  2009-01-01 -> 2014-01-01: 1.0039
+  2010-01-01 -> 2015-01-01: 0.2195
+  2011-01-01 -> 2016-01-01: -0.3577
+  2012-01-01 -> 2017-01-01: 0.0955
+  2013-01-01 -> 2018-01-01: 0.0362
+  2014-01-01 -> 2019-01-01: -0.2268
+  2015-01-01 -> 2020-01-01: -0.0414
+  2016-01-01 -> 2021-01-01: 0.2723
+  2017-01-01 -> 2022-01-01: 0.0651
+  2018-01-01 -> 2023-01-01: 0.2301
+  2019-01-01 -> 2024-01-01: 0.2229
+  2020-01-01 -> 2025-01-01: 0.0478
+
+sharpe_ratio per window:
+  2008-01-01 -> 2013-01-01: 0.4971
+  2009-01-01 -> 2014-01-01: 1.0898
+  2010-01-01 -> 2015-01-01: 0.7594
+  2011-01-01 -> 2016-01-01: 0.3153
+  2012-01-01 -> 2017-01-01: 0.6938
+  2013-01-01 -> 2018-01-01: 0.7289
+  2014-01-01 -> 2019-01-01: 0.2588
+  2015-01-01 -> 2020-01-01: 0.5012
+  2016-01-01 -> 2021-01-01: 0.6682
+  2017-01-01 -> 2022-01-01: 0.6186
+  2018-01-01 -> 2023-01-01: 0.4684
+  2019-01-01 -> 2024-01-01: 0.6181
+  2020-01-01 -> 2025-01-01: 0.4749
